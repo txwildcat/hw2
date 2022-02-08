@@ -300,7 +300,7 @@ puts ""
 # The Dark Knight Rises  2012           PG-13  Christopher Nolan
 
 movies = Movie.all
-movie.person_id = person.name
+# people = Person.all
 
 for movie in movies
     puts "#{movie.title} #{movie.year_released} #{movie.rated} #{movie.person_id}"
