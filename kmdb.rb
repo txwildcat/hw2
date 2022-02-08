@@ -84,29 +84,6 @@ Role.destroy_all
 # Do not use hard-coded foreign key IDs.
 # TODO!
 
-# MOVIE DATA
-
-movie = Movie.new
-movie.title = "Batman Begins"
-movie.year_released = 2005
-movie.rated = "PG-13"
-movie.person_id = christopher.id
-movie.save
-
-movie = Movie.new
-movie.title = "The Dark Knight"
-movie.year_released = 2008
-movie.rated = "PG-13"
-movie.person_id = christopher.id
-movie.save
-
-movie = Movie.new
-movie.title = "The Dark Knight Rises"
-movie.year_released = 2012
-movie.rated = "PG-13"
-movie.person_id = christopher.id
-movie.save
-
 # PERSON DATA
 
 person = Person.new
@@ -156,6 +133,46 @@ person.save
 person = Person.new
 person.name = "Anne Hathaway"
 person.save
+
+christopher = Person.where({ name: "Christopher Nolan" })[0]
+christian = Person.where({ name: "Christian Bale" })[0]
+michael = Person.where({ name: "Michael Caine" })[0]
+liam = Person.where({ name: "Liam Neeson" })[0]
+katie = Person.where({ name: "Katie Holmes" })[0]
+gary = Person.where({ name: "Gary Oldman" })[0]
+heath = Person.where({ name: "Heath Ledger" })[0]
+aaron = Person.where({ name: "Aaron Eckhart" })[0]
+maggie = Person.where({ name: "Maggie Gyllenhaal" })[0]
+tom = Person.where({ name: "Tom Hardy" })[0]
+joseph = Person.where({ name: "Joseph Gordon-Levitt" })[0]
+anne = Person.where({ name: "Anne Hathaway" })[0]
+
+# MOVIE DATA
+
+movie = Movie.new
+movie.title = "Batman Begins"
+movie.year_released = 2005
+movie.rated = "PG-13"
+movie.person_id = christopher.id
+movie.save
+
+movie = Movie.new
+movie.title = "The Dark Knight"
+movie.year_released = 2008
+movie.rated = "PG-13"
+movie.person_id = christopher.id
+movie.save
+
+movie = Movie.new
+movie.title = "The Dark Knight Rises"
+movie.year_released = 2012
+movie.rated = "PG-13"
+movie.person_id = christopher.id
+movie.save
+
+begins = Movie.where({ title: "Batman Begins" })[0]
+knight = Movie.where({ title: "The Dark Knight" })[0]
+rises = Movie.where({ title: "The Dark Knight Rises" })[0]
 
 # ROLE DATA
 
