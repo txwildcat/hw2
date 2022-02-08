@@ -176,23 +176,23 @@ rises = Movie.where({ title: "The Dark Knight Rises" })[0]
 
 # ROLE DATA
 
-role = Role.new
-role.movie_id = begins.id
-role.person_id = christopher.id
-role.character_name = "Christopher Nolan"
-role.save
+# role = Role.new
+# role.movie_id = begins.id
+# role.person_id = christopher.id
+# role.character_name = "Christopher Nolan"
+# role.save
 
-role = Role.new
-role.movie_id = knight.id
-role.person_id = christopher.id
-role.character_name = "Christopher Nolan"
-role.save
+# role = Role.new
+# role.movie_id = knight.id
+# role.person_id = christopher.id
+# role.character_name = "Christopher Nolan"
+# role.save
 
-role = Role.new
-role.movie_id = rises.id
-role.person_id = christopher.id
-role.character_name = "Christopher Nolan"
-role.save
+# role = Role.new
+# role.movie_id = rises.id
+# role.person_id = christopher.id
+# role.character_name = "Christopher Nolan"
+# role.save
 
 role = Role.new
 role.movie_id = begins.id
@@ -291,6 +291,32 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output
 # TODO!
+
+# Movies
+# ======
+# title             year_released      rated      person_id
+# Batman Begins          2005           PG-13  Christopher Nolan
+# The Dark Knight        2008           PG-13  Christopher Nolan
+# The Dark Knight Rises  2012           PG-13  Christopher Nolan
+
+movies = Movie.all
+movie.person_id = person.name
+
+for movie in movies
+    puts "#{movie.title} #{movie.year_released} #{movie.rated} #{movie.person_id}"
+end
+#     activities = salesperson.activities
+#     for activity in activities
+#       contact = activity.contact
+#       puts "#{activity.note} - #{contact.first_name} #{contact.last_name}"
+#     end
+#   end
+
+# movies = Movie.all    THIS ALL WORKS
+# for movie in movies
+#     begins = "#{movie.title} #{movie.year_released} #{movie.rated} #{person.person_id}"
+#     puts begins
+# end
 
 # Prints a header for the cast output
 puts ""
