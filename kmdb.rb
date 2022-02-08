@@ -23,7 +23,7 @@
 
 # - Generate the models and migration files to match the domain model from hw1.
 #   Execute the migration files to create the tables in the database. Add the
-#   relevant association methods in each model. (5 points)
+#   relevant association methods in each model. (5 points) (DONE)
 
 # - Insert the "Batman" sample data using ruby code. Do not use hard-coded ids and
 #   delete any existing data beforehand so that each run of this script does not
@@ -71,14 +71,201 @@
 
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
-# TODO!
+# TODO! (DONE)
+
+Movie.destroy_all
+Person.destroy_all
+Role.destroy_all
 
 # Generate models and tables, according to the domain model
-# TODO!
+# TODO! (DONE)
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
 # TODO!
+
+# MOVIE DATA
+
+movie = Movie.new
+movie.title = "Batman Begins"
+movie.year_released = 2005
+movie.rated = "PG-13"
+movie.person_id = christopher.id
+movie.save
+
+movie = Movie.new
+movie.title = "The Dark Knight"
+movie.year_released = 2008
+movie.rated = "PG-13"
+movie.person_id = christopher.id
+movie.save
+
+movie = Movie.new
+movie.title = "The Dark Knight Rises"
+movie.year_released = 2012
+movie.rated = "PG-13"
+movie.person_id = christopher.id
+movie.save
+
+# PERSON DATA
+
+person = Person.new
+person.name = "Christopher Nolan"
+person.save
+
+person = Person.new
+person.name = "Christian Bale"
+person.save
+
+person = Person.new
+person.name = "Michael Caine"
+person.save
+
+person = Person.new
+person.name = "Liam Neeson"
+person.save
+
+person = Person.new
+person.name = "Katie Holmes"
+person.save
+
+person = Person.new
+person.name = "Gary Oldman"
+person.save
+
+person = Person.new
+person.name = "Heath Ledger"
+person.save
+
+person = Person.new
+person.name = "Aaron Eckhart"
+person.save
+
+person = Person.new
+person.name = "Maggie Gyllenhaal"
+person.save
+
+person = Person.new
+person.name = "Tom Hardy"
+person.save
+
+person = Person.new
+person.name = "Joseph Gordon-Levitt"
+person.save
+
+person = Person.new
+person.name = "Anne Hathaway"
+person.save
+
+# ROLE DATA
+
+role = Role.new
+role.movie_id = begins.id
+role.person_id = christopher.id
+role.character_name = "Christopher Nolan"
+role.save
+
+role = Role.new
+role.movie_id = knight.id
+role.person_id = christopher.id
+role.character_name = "Christopher Nolan"
+role.save
+
+role = Role.new
+role.movie_id = rises.id
+role.person_id = christopher.id
+role.character_name = "Christopher Nolan"
+role.save
+
+role = Role.new
+role.movie_id = begins.id
+role.person_id = christian.id
+role.character_name = "Bruce Wayne"
+role.save
+
+role = Role.new
+role.movie_id = begins.id
+role.person_id = michael.id
+role.character_name = "Alfred"
+role.save
+
+role = Role.new
+role.movie_id = begins.id
+role.person_id = liam.id
+role.character_name = "Ra's Al Ghul"
+role.save
+
+role = Role.new
+role.movie_id = begins.id
+role.person_id = katie.id
+role.character_name = "Rachel Dawes"
+role.save
+
+role = Role.new
+role.movie_id = begins.id
+role.person_id = gary.id
+role.character_name = "Commissioner Gordon"
+role.save
+
+role = Role.new
+role.movie_id = knight.id
+role.person_id = christian.id
+role.character_name = "Bruce Wayne"
+role.save
+
+role = Role.new
+role.movie_id = knight.id
+role.person_id = heath.id
+role.character_name = "Joker"
+role.save
+
+role = Role.new
+role.movie_id = knight.id
+role.person_id = aaron.id
+role.character_name = "Harvey Dent"
+role.save
+
+role = Role.new
+role.movie_id = knight.id
+role.person_id = michael.id
+role.character_name = "Alfred"
+role.save
+
+role = Role.new
+role.movie_id = knight.id
+role.person_id = maggie.id
+role.character_name = "Rachel Dawes"
+role.save
+
+role = Role.new
+role.movie_id = rises.id
+role.person_id = christian.id
+role.character_name = "Bruce Wayne"
+role.save
+
+role = Role.new
+role.movie_id = rises.id
+role.person_id = gary.id
+role.character_name = "Commissioner Gordon"
+role.save
+
+role = Role.new
+role.movie_id = rises.id
+role.person_id = tom.id
+role.character_name = "Bane"
+role.save
+
+role = Role.new
+role.movie_id = rises.id
+role.person_id = joseph.id
+role.character_name = "John Blake"
+role.save
+
+role = Role.new
+role.movie_id = rises.id
+role.person_id = anne.id
+role.character_name = "Selina Kyle"
+role.save
 
 # Prints a header for the movies output
 puts "Movies"
