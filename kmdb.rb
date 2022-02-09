@@ -27,10 +27,10 @@
 
 # - Insert the "Batman" sample data using ruby code. Do not use hard-coded ids and
 #   delete any existing data beforehand so that each run of this script does not
-#   create duplicate data. (5 points)
+#   create duplicate data. (5 points) (DONE)
 
 # - Query the data and loop through it to display output similar to the following
-#   sample "report". (10 points)
+#   sample "report". (10 points) (DONE)
 
 # Submission
 # 
@@ -82,7 +82,7 @@ Role.destroy_all
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
-# TODO!
+# TODO! (DONE)
 
 # PERSON DATA
 
