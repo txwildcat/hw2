@@ -290,17 +290,9 @@ puts "======"
 puts ""
 
 # Query the movies data and loop through the results to display the movies output
-# TODO!
-
-# Movies
-# ======
-# title             year_released      rated      person_id
-# Batman Begins          2005           PG-13  Christopher Nolan
-# The Dark Knight        2008           PG-13  Christopher Nolan
-# The Dark Knight Rises  2012           PG-13  Christopher Nolan
+# TODO! (DONE)
 
 movies = Movie.all
-# people = Person.all
 
 for movie in movies
     director = Person.where({ id: movie.person_id })[0]
@@ -314,4 +306,12 @@ puts "========"
 puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
-# TODO!
+# TODO! (DONE)
+
+roles = Role.all
+
+for role in roles
+    film = Movie.where({ id: role.movie_id })[0]
+    human = Person.where({ id: role.person_id })[0]
+    puts "#{film.title} #{human.name} #{role.character_name}"
+end
