@@ -303,20 +303,9 @@ movies = Movie.all
 # people = Person.all
 
 for movie in movies
-    puts "#{movie.title} #{movie.year_released} #{movie.rated} #{movie.person_id}"
+    director = Person.where({ id: movie.person_id })[0]
+    puts "#{movie.title} #{movie.year_released} #{movie.rated} #{director.name}"
 end
-#     activities = salesperson.activities
-#     for activity in activities
-#       contact = activity.contact
-#       puts "#{activity.note} - #{contact.first_name} #{contact.last_name}"
-#     end
-#   end
-
-# movies = Movie.all    THIS ALL WORKS
-# for movie in movies
-#     begins = "#{movie.title} #{movie.year_released} #{movie.rated} #{person.person_id}"
-#     puts begins
-# end
 
 # Prints a header for the cast output
 puts ""
